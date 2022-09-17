@@ -9,6 +9,7 @@ import '../styles/carousel.css'
 
 import {useOriginalQuery} from '../services/Api'
 import ThumbnailsMovie from "./ThumbnailsMovie";
+import MoviePoster from "./MoviePoster";
 
 const Original  = () => {
 const {data, isLoading, error} = useOriginalQuery()
@@ -24,7 +25,7 @@ const {data, isLoading, error} = useOriginalQuery()
           error?(<>error</>)
           :isLoading?(<>Loading</>)
           :(data.results.map((movies) => {
-            return <ThumbnailsMovie key={movies.id} movie={movies} />
+            return <MoviePoster key={movies.id} movie={movies} />
           }))
         }
         </Carousel>

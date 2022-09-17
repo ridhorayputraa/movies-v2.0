@@ -12,7 +12,8 @@
 
 
 .rec-arrow{
-    transition: all 0.3s ease;
+    opacity: 0.2;
+    transition: all 0.4s ease;
     font-size: 1.7rem !important;
     color: rgb(226, 229, 231) !important;
     width: 2.7rem !important;

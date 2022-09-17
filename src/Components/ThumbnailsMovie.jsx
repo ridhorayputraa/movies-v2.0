@@ -11,6 +11,11 @@ const ThumbnailsMovie = ({movie: movie}) => {
             <div className="Thumbnails-wrapper">
             <Link  className="Thumbnails-wrapper" to={`/detail/${movie.id}`}  >
                 <img className="card_poster" src={`${urlHeader}${movie.backdrop_path}`} />
+                <div className="centered">
+               <p className='centered-text'>
+                {movie.title}
+                </p>
+                </div>
                 </Link>
             </div>    
         </>
