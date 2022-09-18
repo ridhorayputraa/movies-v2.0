@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {useDetailsQuery} from '../services/Api'
 
 import { useParams, useNavigate } from "react-router-dom";
@@ -7,12 +7,13 @@ import { useDetailstvQuery } from "../services/Api";
 import '../styles/style.css'
 import Trailer from "./Trailer";
 import PopularSection from "./PopularSection";
+import Movierecomend from "./MovieRecomend";
 
 const Detailmovies = () =>  {
     const {Id} = useParams()
 
     const { data, error, isLoading} = useDetailsQuery(Id)
-  
+
     
 return(
     <>
@@ -26,18 +27,18 @@ return(
               <iframe
             className="Yttrailer"
      
-      src={`https://www.youtube.com/embed/${data.results[0].key
-      }`}
+      src={`https://www.youtube.com/embed/${ data.results[1] !== undefined? data.results[0].key : "ER8wXRhZW1k"}   `}
      
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
       title="Embedded youtube"
     />
-     </>): <>404</>
+     </>): (<>404</>)
        }
       
         <Trailer/>
+       <Movierecomend/>
        <PopularSection />
                     
     

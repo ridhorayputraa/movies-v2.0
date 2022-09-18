@@ -8,19 +8,18 @@ import { Typography } from "@mui/material";
 
 import Carousel from 'react-elastic-carousel'
 import '../styles/carousel.css'
-import { useParams } from "react-router-dom";
 
-import {useTvrecomendQuery} from '../services/Api'
+import {useTvtrendingQuery} from '../services/Api'
 
 import MoviePoster from "./MoviePoster";
 
-const Tvrecomend = () => {
-    const {Id} = useParams()
-const {data, isLoading, error} = useTvrecomendQuery(Id)
+const TvTrending = () => {
+
+const {data, isLoading, error} = useTvtrendingQuery()
     return(
       <>
       <div className="popular-text">
-        <Typography variant='h4' sx={{color:'white'}} >Recomendations</Typography>
+        <Typography variant='h4' sx={{color:'white'}} >Trending</Typography>
         </div>
        <div className="popular-thumbnails">
        <Carousel itemsToScroll={1} itemsToShow={5} pagination={false}  enableAutoPlay={true} autoPlaySpeed={12000} >
@@ -37,4 +36,4 @@ const {data, isLoading, error} = useTvrecomendQuery(Id)
     )
 } 
 
-export default Tvrecomend;
+export default TvTrending;

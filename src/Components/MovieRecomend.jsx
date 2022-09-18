@@ -10,13 +10,13 @@ import Carousel from 'react-elastic-carousel'
 import '../styles/carousel.css'
 import { useParams } from "react-router-dom";
 
-import {useTvrecomendQuery} from '../services/Api'
+import {useMovierecomendQuery} from '../services/Api'
 
 import MoviePoster from "./MoviePoster";
 
-const Tvrecomend = () => {
+const Movierecomend = () => {
     const {Id} = useParams()
-const {data, isLoading, error} = useTvrecomendQuery(Id)
+const {data, isLoading, error} = useMovierecomendQuery(Id)
     return(
       <>
       <div className="popular-text">
@@ -28,7 +28,7 @@ const {data, isLoading, error} = useTvrecomendQuery(Id)
           error?(<>error</>)
           :isLoading?(<>Loading</>)
           :(data.results.map((movies) => {
-            return <MoviePoster key={movies.id} movie={movies} tv={'tv'} />
+            return <MoviePoster key={movies.id} movie={movies}  />
           }))
         }
         </Carousel>
@@ -37,4 +37,4 @@ const {data, isLoading, error} = useTvrecomendQuery(Id)
     )
 } 
 
-export default Tvrecomend;
+export default Movierecomend;

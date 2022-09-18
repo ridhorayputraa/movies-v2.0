@@ -27,7 +27,7 @@ return(
               <iframe
             className="Yttrailer"
      
-      src={`https://www.youtube.com/embed/${data.results[0].key || 67389
+      src={` https://www.youtube.com/embed/${  data.results[1] !== undefined? data.results[0].key : "ER8wXRhZW1k" 
       }`}
      
       frameBorder="0"

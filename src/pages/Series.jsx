@@ -12,6 +12,8 @@ import Trending from "../Components/Trending";
 import Original from "../Components/Original";
 import Continous from "../Components/ContinuosWatching";
 import TvPopular from "../Components/TvPopular";
+import TvOnAir from "../Components/Tvonair";
+import TvTrending from "../Components/TvTrending";
 
 
 const Series = () => {
@@ -35,9 +37,8 @@ const Series = () => {
            </div>
            <div className="border">
        <TvPopular/>
-           <Upcoming/>
-           <Trending/>
-           <Original/>
+          <TvOnAir/>
+          <TvTrending/>
            <Continous/>
            </div>
         </div>
