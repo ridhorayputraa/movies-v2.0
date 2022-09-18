@@ -96,7 +96,7 @@ useEffect(
         }
 
         if(error){
-            return setErr('error');
+            return setErr(error.message);
         }
 
 
@@ -105,6 +105,7 @@ useEffect(
          
             navigate('/')
          }
+       
     }, [loading, user, error ,navigate]
 )
 
@@ -194,6 +195,7 @@ return(
                    </Link> } 
                     
                 </Button>
+               
 
             </div>
         </div>

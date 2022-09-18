@@ -1,11 +1,13 @@
+
+
 import React from "react";
-import { useDetailsdescQuery } from "../services/Api";
+import { useDetailsdesctvQuery } from "../services/Api";
 import { useParams } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 
-const Trailer = () => {
+const TvTrailer = () => {
     const {Id} = useParams() 
-    const {data, error, isLoading} = useDetailsdescQuery(Id)
+    const {data, error, isLoading} = useDetailsdesctvQuery(Id)
     
     return (
         <>
@@ -13,12 +15,12 @@ const Trailer = () => {
         
           {
             error?(<>Ada Error disini loh</>)
-            : isLoading ? <Skeleton/>
+            : isLoading ? (<>Loading...</>)
             :data?(
            <>
-              <h1 style={{borderBottom:'#910b0b 2px solid', color:'white', marginBottom:'0.2em'}} className="desc-Details1">{data.title}</h1>
+              <h1 style={{borderBottom:'#910b0b 2px solid', color:'white', marginBottom:'0.2em'}} className="desc-Details1">{data.original_name}</h1>
               <h3 className="desc-Details">Description</h3>
-              <p className="desc-Details">{data.overview || <Skeleton/>}</p>
+              <p className="desc-Details">{data.overview }</p>
               </>
               )
               :(<>404</>)
@@ -32,4 +34,4 @@ const Trailer = () => {
     )
 }
 
-export default Trailer
+export default TvTrailer

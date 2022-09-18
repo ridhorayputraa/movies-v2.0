@@ -5,12 +5,13 @@ import { Typography } from "@mui/material";
 import Carousel from 'react-elastic-carousel'
 import '../styles/carousel.css'
 
-import {usePopulerQuery} from '../services/Api'
-import ThumbnailsMovie from "./ThumbnailsMovie";
+import {usePopulartvtopQuery} from '../services/Api'
 
-const PopularSection  = () => {
+import Phototv from "./Phototv";
+
+const TvPopular  = () => {
   
-const {data, isLoading, error} = usePopulerQuery()
+const {data, isLoading, error} =usePopulartvtopQuery()
 
     return(
       <>
@@ -23,7 +24,7 @@ const {data, isLoading, error} = usePopulerQuery()
           error?(<>error</>)
           :isLoading?(<>Loading</>)
           :(data.results.map((movies) => {
-            return <ThumbnailsMovie key={movies.id} movie={movies} />
+            return <Phototv key={movies.id} tvs={movies} />
           }))
         }
         </Carousel>
@@ -32,4 +33,4 @@ const {data, isLoading, error} = usePopulerQuery()
     )
 } 
 
-export default PopularSection;
+export default TvPopular;

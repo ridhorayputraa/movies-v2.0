@@ -43,14 +43,13 @@ const Login = async(email,password) => {
 try{
     const responseLogin = await  signInWithEmailAndPassword(auth,email,password);
      console.log('berhasil login', responseLogin)
-}catch (errr) {
-    console.log('error code', errr.code);
-      console.log('error meesage', errr.message);
- 
-      return errr
+}catch (error) {
+    console.log(error.message)
+      return error
 }
 
 }
+
 
 
 // 3.) Reset

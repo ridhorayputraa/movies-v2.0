@@ -36,6 +36,31 @@ export const movies = createApi({
         original: builder.query({
             query: () => `/trending/all/day${key}&page=2`
         }),
+        
+
+
+        // TV
+        populartv: builder.query({
+            query: () => `tv/popular${key}&page=2`
+        }),
+        detailstv: builder.query({
+            query: (tvId) => `tv/${tvId}/videos${key}`
+        }),
+        // https://api.themoviedb.org/3/tv/60574?api_key=f2e349fe9e8ecced437343534e51774f&language=en-US
+        detailsdesctv: builder.query({
+            query: (tvId) => `tv/${tvId}${key}`
+        }),
+        
+        topratedtv: builder.query({
+            query: () => `tv/top_rated${key}&page=2`
+        }),
+        populartvtop: builder.query({
+            query: () => `tv/popular${key}&page=1`
+        }),
+        // https://api.themoviedb.org/3/tv/{tv_id}/recommendations?api_key=<<api_key>>&language=en-US&page=1
+        tvrecomend: builder.query({
+            query: (tvId) => `tv/${tvId}/recommendations${key}&page=1`
+        }),
     }),
 
 })
@@ -48,4 +73,10 @@ export const {
     useTrendingQuery,
     useDetailsdescQuery,
     useOriginalQuery,
+    usePopulartvQuery,
+    useDetailstvQuery,
+    useDetailsdesctvQuery,
+    useTopratedtvQuery,
+    usePopulartvtopQuery,
+    useTvrecomendQuery,
 } = movies;

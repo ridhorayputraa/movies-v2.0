@@ -30,7 +30,7 @@ useEffect(
         // user kalau ga ketemu = null, null falsy, !falsy = truthy
         //    if not null || kalau usernya gada
         if(!user){
-                 navigate('/login');
+                 navigate('/login')
                  return;
         }
     },

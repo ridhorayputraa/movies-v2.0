@@ -1,14 +1,22 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function MoviePoster({movie}) {
+export default function MoviePoster({movie, tv}) {
  const urlawal = 'https://image.tmdb.org/t/p/original/'
 
     return (
     <div className='poster_wrapper'>
-      <Link  className="poster_image" to={`/detail/${movie.id}`}  >
-        <img  width='283px' src={`${urlawal}${movie.poster_path}`}/>
-        </Link>
+ 
+
+        {
+                tv === 'tv'? <Link className="poster_image"  to={`/detail/tv/${movie.id}`  }  >
+                <img  width='283px' className="card_poster" src={`${urlawal}${movie.poster_path}`}/>
+            </Link> : 
+            <Link className="poster_image"  to={ `/detail/movie/${movie.id}` }  >
+            <img  width='283px' className="card_poster" src={`${urlawal}${movie.poster_path}`}/>
+            </Link>
+             }
+
     </div>
   )
 }

@@ -16,6 +16,7 @@ import RegisterPage from "../pages/RegisterForm";
 import LoginRegisterForm from "../Components/LoginRegisterForm";
 import Notfound from "../Components/Notfound";
 import ProtectedComponent from "../Components/Protected";
+import DetailTv from "../Components/DetailsTv";
 
 const Container = () => {
     return(
@@ -32,17 +33,37 @@ const Container = () => {
          <Route element={<WithNAvbar/>}>      
                   <Route path="/" element={<Home user={LoginRegisterForm}/>}>
                   </Route>
-                  
-                    <Route path='/detail/:Id' element=
+
+
+
+                  <Route path='/detail/tv/:Id' element=
+                    {
+                        <ProtectedComponent>
+               
+                   <DetailTv/>
+                   </ProtectedComponent>
+                
+             
+                    }
+                    
+                    /> 
+
+
+
+
+                    <Route path='/detail/movie/:Id' element=
                     {
                 <ProtectedComponent>  
-                    
-                    <Detailmovies />
-
+      
+                    <Detailmovies  />
+                
                 </ProtectedComponent>
                     }
                     /> 
-                
+              
+             
+                   
+
                            <Route path="/series" element={<Series/>}/>
             <Route path="/movies" element={<Movies/>}/>
             <Route path="/popular" element={<Popular/>}/>
