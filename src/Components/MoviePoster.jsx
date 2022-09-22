@@ -11,10 +11,10 @@ export default function MoviePoster({movie, tv}) {
 
         {
                 tv === 'tv'? <Link className="poster_image"  to={`/detail/tv/${movie.id}`  }  >
-                <img  width='283px' className="card_poster" src={`${urlawal}${movie.poster_path}` || <Skeleton/>}/>
+                <img alt={movie.original_title} width='283px' className="card_poster" src={`${urlawal}${movie.poster_path}` || <Skeleton/>}/>
             </Link> : 
             <Link className="poster_image"  to={ `/detail/movie/${movie.id}` }  >
-            <img  width='283px' className="card_poster" src={`${urlawal}${movie.poster_path}`}/>
+            <img  width='283px' alt={movie.original_title} className="card_poster" src={`${urlawal}${movie.poster_path}`}/>
             </Link>
              }
 

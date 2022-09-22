@@ -9,7 +9,7 @@ import {useTopratedmoviesQuery} from '../services/Api'
 
 import Carousel from 'react-elastic-carousel'
 import '../styles/carousel.css'
-import PopularSection from "../Components/PopularSection";
+
 import Upcoming from "../Components/Upcoming";
 import Trending from "../Components/Trending";
 import Original from "../Components/Original";

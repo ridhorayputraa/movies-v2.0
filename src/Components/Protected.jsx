@@ -1,4 +1,4 @@
-import React,{useEffect} from "react"
+import {useEffect} from "react"
 
 // react-router-Dom useNavigate
 import { useNavigate } from "react-router-dom";

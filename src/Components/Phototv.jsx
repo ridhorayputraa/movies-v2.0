@@ -11,7 +11,7 @@ const Phototv = ({tvs: movie}) => {
             <div className="Thumbnails-wrapper">
             {/* {`/detail/${movie.id}`} */}
             <Link  className="Thumbnails-wrapper" to={`/detail/tv/${movie.id}`} >
-                <img className="card_poster" src={`${urlHeader}${movie.backdrop_path}`} />
+                <img alt={movie.original_title} className="card_poster" src={`${urlHeader}${movie.backdrop_path}`} />
                 <div className="centered">
                <p className='centered-text'>
                 {movie.title}

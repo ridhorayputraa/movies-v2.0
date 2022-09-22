@@ -12,7 +12,7 @@ import '../styles/carousel.css'
 
 
 import Continous from "../Components/ContinuosWatching";
-import TvPopular from "../Components/TvPopular";
+
 import TvOnAir from "../Components/Tvonair";
 import TvTrending from "../Components/TvTrending";
 import Footer from "../Components/Footer";
