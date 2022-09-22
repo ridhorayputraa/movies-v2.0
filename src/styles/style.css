@@ -15,11 +15,13 @@ a:-webkit-any-link {
     box-sizing: border-box;
     /* font-family: 'Montserrat', sans-serif; */
 }
-
+.nav-wrapper{
+    overflow-y: hidden;
+}
 nav {
     color: #cdcaca;
     padding: 20px;
-    width: 100vw;
+    max-width: 100vw;
     background-color: #141414;
 }
 

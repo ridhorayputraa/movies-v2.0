@@ -36,7 +36,7 @@ const Navbar = () => {
 
 
 return(
-    <>
+    <div className="nav-wrapper">
         <nav>
    
 
@@ -79,7 +79,7 @@ return(
                 </li>
             </ul>
         </nav>
-    </>
+    </div>
 )
 }
 
