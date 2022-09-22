@@ -1,22 +1,16 @@
-// useTvrecomendQuery
-
-
-
-import React from "react";
+// usePopulermoviesQuery\\import React from "react";
 
 import { Typography } from "@mui/material";
 
 import Carousel from 'react-elastic-carousel'
 import '../styles/carousel.css'
 
-import {useTvtrendingQuery} from '../services/Api'
+import {usePopulermoviesQuery} from '../services/Api'
+import ThumbnailsMovie from "./ThumbnailsMovie";
 
-import MoviePoster from "./MoviePoster";
-
-const TvTrending = () => {
-
-const {data, isLoading, error} = useTvtrendingQuery()
- 
+const MOviePopular = () => {
+  
+const {data, isLoading, error} = usePopulermoviesQuery()
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
   { width: 290, itemsToShow: 2  },
@@ -26,10 +20,10 @@ const breakPoints = [
   { width: 1750, itemsToShow: 6 },
 ]
 
-return(
+    return(
       <>
       <div className="popular-text">
-        <Typography variant='h4' sx={{color:'white'}} >Trending</Typography>
+        <Typography variant='h4' sx={{color:'white'}} >Popular</Typography>
         </div>
        <div className="popular-thumbnails">
        <Carousel itemsToScroll={1} breakPoints={breakPoints.map((data) => {
@@ -39,7 +33,7 @@ return(
           error?(<>error</>)
           :isLoading?(<>Loading</>)
           :(data.results.map((movies) => {
-            return <MoviePoster key={movies.id} movie={movies} tv={'tv'} />
+            return <ThumbnailsMovie key={movies.id} movie={movies} />
           }))
         }
         </Carousel>
@@ -48,4 +42,4 @@ return(
     )
 } 
 
-export default TvTrending;
+export default MOviePopular;

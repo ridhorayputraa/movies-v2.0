@@ -2,7 +2,7 @@ import React from "react";
 
 import { Typography } from "@mui/material";
 import {Link} from 'react-router-dom'
-import Skeleton from "react-loading-skeleton";
+
 
 
 const Jumbotron = ({movie, tv}) => {

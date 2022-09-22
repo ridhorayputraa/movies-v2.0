@@ -1,6 +1,7 @@
 a:-webkit-any-link {
     text-decoration: none;
     color: inherit;
+  
 }
 
 /* html {
@@ -26,7 +27,7 @@ ul {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     justify-content: center;
-    align-content: center;
+  
     align-items: center;
     list-style: none;
     text-decoration: none;
@@ -36,6 +37,11 @@ ul {
 .logo {
     flex-grow: 4;
     margin-right: 2em;
+}
+
+.avatar_anonym{
+    width: 30px;
+    height: 30px;
 }
 
 .list {
@@ -49,6 +55,7 @@ ul {
 .list2 {
     margin-right: 2em;
     margin-left: 13em;
+    
 }
 
 .list3 {
@@ -60,14 +67,23 @@ ul {
     cursor: pointer;
 }
 
+.list3_img {
+    width:25px;
+}
+
 .list3:hover {
     opacity: 0.8;
 }
 
 .avatar {
+    width: 40px;
+    height: 40px;
     -webkit-filter: brightness(89%);
+    filter: brightness(89%);
     cursor: pointer;
 }
+
+
 
 
 
@@ -83,6 +99,8 @@ ul {
     color: #cdcaca;
     background-color: #000000;
 }
+
+
 
 .loginPage {
 
@@ -159,6 +177,7 @@ ul {
 
 .Jumbotron-Card-Image {
     -webkit-filter: brightness(87%);
+    filter: brightness(87%);
     padding: 0;
     margin-left: 2em;
     
@@ -232,10 +251,11 @@ ul {
 
 /* Thumbnails */
 .Thumbnails-wrapper {
+    margin-bottom: 1.3em;
     gap: 0.8em;
     display: flex;
     width: 282px;
-    height: 170px;
+    height: 180px;
 }
 
 .popular-thumbnails {
@@ -243,7 +263,9 @@ ul {
     flex-direction: row;
 }
 
-
+.logo_img{
+    width:30px;
+}
 
 /* i Frame */
 
@@ -257,12 +279,14 @@ ul {
     height: 480px;
     width: 100%;
     -webkit-filter: brightness(70%);
+    filter: brightness(70%);
     top: 0;
     left: 0;
 
 }
 
 .Detail-wrapper {
+   
     background-color: #141414;
     height: 100%;
     width: 100vw;
@@ -277,7 +301,12 @@ ul {
 
 .desc-Details {
     margin-bottom: 0.2em;
-    color: #f1efef;
+    color: #cecccc;
+}
+
+.card_poster{
+    
+    margin-bottom: 1.3em;
 }
 
 .card_poster:hover {
@@ -288,4 +317,262 @@ ul {
 .Header_Jumbotron:hover{
     transition: 300ms;
     opacity: 0.8;
+}
+
+.footer-wrapper{
+    margin-top: 7em;
+    padding-bottom: 5em;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer_content_left p{
+    margin-bottom: 0.6em;
+ color: #808080;
+ margin-right: 7em;
+}
+
+.footer_content_left_middle p{
+    margin-bottom: 0.6em;
+    color: #808080;
+    margin-right: 7em;
+}
+
+.footer_content_right_middle p{
+    margin-bottom: 0.6em;
+    color: #808080;
+    margin-right: 7em;
+}
+
+.footer_content_right p{
+    margin-bottom: 0.6em;
+    color: #808080;
+    margin-right: 7em;
+}
+
+.service_code{
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+    height: 2.5em;
+    width: 10em;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    padding: 1em;
+    border: 1px solid #808080;
+}
+
+/* Responsif */
+
+
+/* login page */
+
+
+@media all and (max-width:889px){
+
+.loginForm{
+    width: 100%;
+    height: 100em;
+}
+
+.card-Login-image{
+   margin: 0;
+   padding: 0;
+    width: 0%;
+    height: 0%;
+    visibility: hidden;
+   
+}
+.loginForm {
+    
+    margin-left: 0em;
+}
+
+}
+
+
+
+@media all and (max-width:666px){
+    
+    .textfield {
+        border-radius: 15px;
+        margin-right: 15px;
+        color: white;
+        width: 300px;
+    
+        background-color: rgba(255, 255, 255, 0.07);
+    }
+    
+    
+    .Thumbnails-wrapper img {
+        margin-bottom: 1.3em;
+        
+        display: flex;
+        width:290px;
+        height: 160px;
+    }
+
+    
+    .logo_img{
+        width:22px;
+    }
+    .Card-Text {
+     
+        width: 0%;
+    }
+   
+/* 
+      ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -1000px;
+        text-align: center;
+        transition: all 0.5s;
+      }
+      nav ul li{
+        display: block;
+        margin: 50px 0px;
+        line-height: 30px;
+       
+      }
+      nav ul li a{
+        z-index: 100;
+        font-size: 20px;
+      } */
+
+
+nav{
+    padding: 0px;
+}
+
+      
+nav ul li a{
+    
+  
+  
+   font-size: 12px;
+   width: 100vw;
+}
+
+
+
+
+.logo {
+    flex-grow: unset;
+ 
+    margin-right: 0.3em;
+}
+
+.list {
+ 
+  
+    margin-right: 0.5em;
+    flex-grow: unset;
+
+}
+
+.list2 {
+    flex-grow: unset;
+    font-size: 12px;
+   margin: 0px;
+
+}
+
+.list3 {
+
+  
+   margin: 0px;
+    cursor: pointer;
+}
+.list3_img {
+    margin-left: 0.4em;
+    width:18px;
+}
+
+.avatar {
+    margin-left: 0.4em;
+    width: 22px;
+    -webkit-filter: brightness(89%);
+    filter: brightness(89%);
+    cursor: pointer;
+}
+.avatar_anonym{
+    width: 22px;
+    height: 22px;
+}
+
+
+}
+
+
+@media all and (max-width:365px){
+    .textfield {
+        border-radius: 15px;
+        margin-right: 15px;
+        color: white;
+        width: 250px;
+    
+        background-color: rgba(255, 255, 255, 0.07);
+    }
+    .list2 {
+        flex-grow: unset;
+        font-size: 9px;
+       margin: 0px;
+    
+    }
+
+    .avatar_anonym{
+        width: 20px;
+        height: 20px;
+    }
+    .list {
+ 
+       
+        margin-right: 0.4em;
+        flex-grow: unset;
+    
+    }
+    /* 
+          ul{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: #2c3e50;
+            top: 80px;
+            left: -1000px;
+            text-align: center;
+            transition: all 0.5s;
+          }
+          nav ul li{
+            display: block;
+            margin: 50px 0px;
+            line-height: 30px;
+           
+          }
+          nav ul li a{
+            z-index: 100;
+            font-size: 20px;
+          } */
+    
+    
+    
+    
+          
+    nav ul li a{
+        
+      
+      
+       font-size: 9px;
+       width: 100vw;
+    }
+    
+    .logo_img{
+        width:20px;
+    }
+
 }

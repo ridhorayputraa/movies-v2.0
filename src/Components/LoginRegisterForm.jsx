@@ -17,7 +17,7 @@ import {
 auth,
 Login,
 Register,
-Reset,
+// Reset,
 }
 from '../auth/firebase'
 
@@ -110,9 +110,9 @@ useEffect(
 )
 
 
-const buttonResetPassWord = () => {
-    Reset(credential.email)
-}
+// const buttonResetPassWord = () => {
+//     Reset(credential.email)
+// }
 
 
 
@@ -120,13 +120,13 @@ const buttonResetPassWord = () => {
 return(
 <div className="loginPage">
     <div className="card-Login">
+    <div className="card-Login-image">
+    
         <img alt='cardimage' src={it}></img>
-
+</div>
         <div className="loginForm">
             {/* Text Login/Register */}
             <div className="textLogin">
-
-            </div>
             <div className="LoginForm-Text">
  <p>{postMessage}</p>
 
@@ -198,6 +198,8 @@ return(
                
 
             </div>
+            </div>
+          
         </div>
 
 

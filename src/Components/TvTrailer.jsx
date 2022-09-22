@@ -3,7 +3,6 @@
 import React from "react";
 import { useDetailsdesctvQuery } from "../services/Api";
 import { useParams } from "react-router-dom";
-import Skeleton from "react-loading-skeleton";
 
 const TvTrailer = () => {
     const {Id} = useParams() 
@@ -14,7 +13,7 @@ const TvTrailer = () => {
     <div className="desc-details-wrapper">
         
           {
-            error?(<>Ada Error disini loh</>)
+            error?(<>Erorr </>)
             : isLoading ? (<>Loading...</>)
             :data?(
            <>
