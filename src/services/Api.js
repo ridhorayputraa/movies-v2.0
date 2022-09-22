@@ -2,8 +2,7 @@ import {
     createApi,
     fetchBaseQuery
 } from '@reduxjs/toolkit/query/react'
-
-const key = '?api_key=f2e349fe9e8ecced437343534e51774f'
+const key = process.env.REACT_APP_TMDB_KEY
 const eng = '&language=en-US&append_to_response=images&include_image_language=en'
 
 
