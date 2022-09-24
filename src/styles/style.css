@@ -373,6 +373,51 @@ ul {
 
 
 @media all and (max-width:889px){
+    .footer-wrapper{
+        margin-left: 1em;
+        margin-top: 7em;
+        padding-bottom: 5em;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer_content_left p{
+        margin-bottom: 0.6em;
+     color: #808080;
+     margin-right: 0;
+    }
+    
+    .footer_content_left_middle p{
+        margin-bottom: 0.6em;
+        color: #808080;
+        margin-right: 0em;
+    }
+    
+    .footer_content_right_middle p{
+        margin-bottom: 0.6em;
+        color: #808080;
+        margin-right: 0em;
+    }
+    
+    .footer_content_right p{
+        margin-bottom: 0.6em;
+        color: #808080;
+        margin-right: 0em;
+    }
+    
+    .service_code{
+        margin-top: 0.8em;
+        margin-bottom: 0.8em;
+        height: 2.5em;
+        width: 10em;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        padding: 1em;
+        border: 1px solid #808080;
+    }
 
 .loginForm{
     width: 100%;
