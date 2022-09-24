@@ -424,7 +424,7 @@ ul {
     height: 100em;
 }
 
-.card-Login-image{
+.card-Login-image img{
    margin: 0;
    padding: 0;
     width: 0%;
@@ -432,6 +432,15 @@ ul {
     visibility: hidden;
    
 }
+
+.card-Login-image {
+    margin: 0;
+    padding: 0;
+     width: 0%;
+     height: 0%;
+     visibility: hidden;
+    
+ }
 .loginForm {
     
     margin-left: 0em;
