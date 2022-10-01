@@ -7,11 +7,13 @@ import {useTopratedQuery} from '../services/Api'
 
 import Carousel from 'react-elastic-carousel'
 import '../styles/carousel.css'
-import PopularSection from "../Components/PopularSection";
+
 import Upcoming from "../Components/Upcoming";
 import Trending from "../Components/Trending";
 import Original from "../Components/Original";
 import Continous from "../Components/ContinuosWatching";
+import Footer from "../Components/Footer";
+import TvOnAir from "../Components/Tvonair";
 
 
 const Home = () => {
@@ -35,12 +37,13 @@ const Home = () => {
            </Carousel>
            </div>
            <div className="border">
-           <PopularSection/>
-           <Upcoming/>
            <Trending/>
+          <TvOnAir/>
+           <Upcoming/>
            <Original/>
            <Continous/>
            </div>
+           <Footer/>
         </div>
     )
 }

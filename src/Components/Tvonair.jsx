@@ -1,3 +1,5 @@
+// 
+
 import React from "react";
 
 import { Typography } from "@mui/material";
@@ -5,13 +7,13 @@ import { Typography } from "@mui/material";
 import Carousel from 'react-elastic-carousel'
 import '../styles/carousel.css'
 
-import {usePopulartvtopQuery} from '../services/Api'
+import {useOnairQuery} from '../services/Api'
 
 import Phototv from "./Phototv";
 
-const TvPopular  = () => {
+const TvOnAir  = () => {
   
-const {data, isLoading, error} =usePopulartvtopQuery()
+const {data, isLoading, error} =useOnairQuery()
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
   { width: 290, itemsToShow: 2  },
@@ -21,11 +23,10 @@ const breakPoints = [
   { width: 1750, itemsToShow: 6 },
 ]
 
-
     return(
       <>
       <div className="popular-text">
-        <Typography variant='h4' sx={{color:'white'}} >Popular</Typography>
+        <Typography variant='h4' sx={{color:'white'}} >New Series</Typography>
         </div>
        <div className="popular-thumbnails">
        <Carousel itemsToScroll={1} breakPoints={breakPoints.map((data) => {
@@ -44,4 +45,4 @@ const breakPoints = [
     )
 } 
 
-export default TvPopular;
+export default TvOnAir;

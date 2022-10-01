@@ -7,11 +7,12 @@ import {useTopratedtvQuery} from '../services/Api'
 import Carousel from 'react-elastic-carousel'
 import '../styles/carousel.css'
 
-import Upcoming from "../Components/Upcoming";
-import Trending from "../Components/Trending";
-import Original from "../Components/Original";
+
 import Continous from "../Components/ContinuosWatching";
 import TvPopular from "../Components/TvPopular";
+import TvOnAir from "../Components/Tvonair";
+import TvTrending from "../Components/TvTrending";
+import Footer from "../Components/Footer";
 
 
 const Series = () => {
@@ -35,11 +36,11 @@ const Series = () => {
            </div>
            <div className="border">
        <TvPopular/>
-           <Upcoming/>
-           <Trending/>
-           <Original/>
+          <TvOnAir/>
+          <TvTrending/>
            <Continous/>
            </div>
+           <Footer/>
         </div>
     )
 }

@@ -1,15 +1,15 @@
 import React from "react";
 import Home from "../pages/Home";
-import { Route, Routes, Outlet } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Movies from "../pages/Movies";
 import Series from "../pages/Series";
 import Popular from "../pages/Popular";
-import Navbar from '../Components/Navbar';
+
 import LoginPage from "../pages/LoginPage";
 import Detailmovies from "../Components/DetailsMovie";
 
 
-import {Box} from '@mui/material'
+
 import WithoutNav from "./WithoutNav";
 import WithNAvbar from "./WithNavbar";
 import RegisterPage from "../pages/RegisterForm";

@@ -1,17 +1,23 @@
+// useTvrecomendQuery
+
+
+
 import React from "react";
 
 import { Typography } from "@mui/material";
 
 import Carousel from 'react-elastic-carousel'
 import '../styles/carousel.css'
+import { useParams } from "react-router-dom";
 
-import {usePopulartvtopQuery} from '../services/Api'
+import {useMovierecomendQuery} from '../services/Api'
 
-import Phototv from "./Phototv";
+import MoviePoster from "./MoviePoster";
 
-const TvPopular  = () => {
-  
-const {data, isLoading, error} =usePopulartvtopQuery()
+const Movierecomend = () => {
+    const {Id} = useParams()
+const {data, isLoading, error} = useMovierecomendQuery(Id)
+
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
   { width: 290, itemsToShow: 2  },
@@ -20,12 +26,10 @@ const breakPoints = [
   { width: 1450, itemsToShow: 5 },
   { width: 1750, itemsToShow: 6 },
 ]
-
-
     return(
       <>
       <div className="popular-text">
-        <Typography variant='h4' sx={{color:'white'}} >Popular</Typography>
+        <Typography variant='h4' sx={{color:'white'}} >Recomendations</Typography>
         </div>
        <div className="popular-thumbnails">
        <Carousel itemsToScroll={1} breakPoints={breakPoints.map((data) => {
@@ -35,7 +39,7 @@ const breakPoints = [
           error?(<>error</>)
           :isLoading?(<>Loading</>)
           :(data.results.map((movies) => {
-            return <Phototv key={movies.id} tvs={movies} />
+            return <MoviePoster key={movies.id} movie={movies}  />
           }))
         }
         </Carousel>
@@ -44,4 +48,4 @@ const breakPoints = [
     )
 } 
 
-export default TvPopular;
+export default Movierecomend;

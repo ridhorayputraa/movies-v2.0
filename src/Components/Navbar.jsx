@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React from "react";
 
 // Image !
 import logo from '../assets/img/icon.png'
@@ -17,10 +17,9 @@ import { generateRandomAvatarOptions } from '../assets/img/Avatar';
 import {auth} from '../auth/firebase'
 
 import { Logout } from "../auth/firebase";
-
 import { useAuthState } from "react-firebase-hooks/auth";
 // React Route DOM !
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Navbar = () => {
     
     
@@ -37,18 +36,19 @@ const Navbar = () => {
 
 
 return(
-    <>
+    <div className="nav-wrapper">
         <nav>
-       
+   
+
             <ul>
                 <li className="logo">
-                 <img src={logo} width='30px' alt="icon">
+                 <img className="logo_img" src={logo}  alt="icon">
                  </img></li>
                 <li className="list" ><Link to='/'>Home</Link></li>
                 <li className="list"><Link to='/series'>Series</Link></li>
                 <li className="list"><Link to='/movies'>Movies</Link></li>
-                <li className="list"><Link to='/popular'>New and Popular</Link></li>
-
+                <li className="list"><Link to='/popular'>New & Popular</Link></li>
+             
                {
                   user ? (
                     <li className="list2">{user.email}</li>
@@ -57,7 +57,7 @@ return(
 
                {
                 user ? (
-                    <li className="list3"  onClick={buttonOnClickHandler}><img src={logOutImg} width='25px' alt='logOut' ></img></li>
+                    <li className="list3"  onClick={buttonOnClickHandler}><img className="list3_img" src={logOutImg}  alt='logOut' ></img></li>
                 ) : ""
                }
                   
@@ -69,16 +69,17 @@ return(
                {
                 user ? (
                 <Avatar className="avatar"
-        style={{ width: '40px', height: '40px' }}
+
+        
         avatarStyle='Circle'
         {...generateRandomAvatarOptions() } />
                   
-                ) : <img src={Anonym} className="avatar" height= '30px' width='30px' alt="Anony," />
+                ) : <img src={Anonym} className="avatar_anonym"  alt="Anonym" />
                }
                 </li>
             </ul>
         </nav>
-    </>
+    </div>
 )
 }
 

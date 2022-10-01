@@ -1,17 +1,16 @@
-import React from "react";
+// usePopulermoviesQuery\\import React from "react";
 
 import { Typography } from "@mui/material";
 
 import Carousel from 'react-elastic-carousel'
 import '../styles/carousel.css'
 
-import {usePopulartvtopQuery} from '../services/Api'
+import {usePopulermoviesQuery} from '../services/Api'
+import ThumbnailsMovie from "./ThumbnailsMovie";
 
-import Phototv from "./Phototv";
-
-const TvPopular  = () => {
+const MOviePopular = () => {
   
-const {data, isLoading, error} =usePopulartvtopQuery()
+const {data, isLoading, error} = usePopulermoviesQuery()
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
   { width: 290, itemsToShow: 2  },
@@ -20,7 +19,6 @@ const breakPoints = [
   { width: 1450, itemsToShow: 5 },
   { width: 1750, itemsToShow: 6 },
 ]
-
 
     return(
       <>
@@ -35,7 +33,7 @@ const breakPoints = [
           error?(<>error</>)
           :isLoading?(<>Loading</>)
           :(data.results.map((movies) => {
-            return <Phototv key={movies.id} tvs={movies} />
+            return <ThumbnailsMovie key={movies.id} movie={movies} />
           }))
         }
         </Carousel>
@@ -44,4 +42,4 @@ const breakPoints = [
     )
 } 
 
-export default TvPopular;
+export default MOviePopular;
